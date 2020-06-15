@@ -1,0 +1,75 @@
+<html>
+	<head>
+		<title>
+			home
+		</title>
+		<script>
+		 document.write("the current date and time is ")
+		 var x = new Date();
+		 document.write(x);
+		 console.log(x);
+		// alert("date is "+x);
+		 var firstName = '  ankit';
+		 var secondName = 'tiwari';
+		 var fullName = firstName.concat(' ',secondName);
+		 document.write(fullName);
+		console.log(fullName);
+		var a = [' cat',' dog ',' banana '];
+		document.write(a[0],a[2],a[1]);
+		document.write(a[-3]);
+		a[4] = ' ankit';
+		document.write(a[4]);
+		document.write(a);
+		console.log(a);
+     
+  		var myArray = [' car',' bike '];
+  		console.log(myArray);
+  		myArray.push(' scooter');
+  		myArray.unshift(' train');
+  		console.log(myArray);
+  		myArray.shift();		//car, bike, scooter
+  		console.log(myArray);
+  		myArray.pop();          //car, bike
+  		console.log(myArray);
+  		console.log(myArray.pop());
+
+
+  		var person = {
+  					name: 'Ankit Tiwari',
+  					age: 21,
+  					isMale: true,
+  					personality: [' patient',' loyal',' happy'],
+  					company: {
+  							name: 'edx',  		
+  							id: 2984
+  					}
+  			}
+  			function changeGender(obj)
+  			{
+  				obj.isMale = false;
+  			}
+  			changeGender(person);
+  			person['height'] = '170cm';
+  			console.log(person['age']);
+  			console.log(person.isMale);
+  			console.log(person['company']['name']);
+  			console.log(person['company'].id);
+  			console.log(person);
+  			console.log(person['height']);
+  			
+  			console.log(person.isMale);
+
+  			var n=4,factorial=1;
+  			var i=1;
+  			while(i<=n)
+  			{
+  				factorial=factorial*i;
+  				i++;
+  			}
+  			console.log(factorial);
+		</script>
+	</head>
+	<body>
+		<h1>welcome to the page</h1> 
+	</body>
+</html>   

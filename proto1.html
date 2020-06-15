@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            prototype
+        </title>
+        <script> 
+            function person(name, age){
+                this.name = name;
+                this.age  = age;
+                this.greeting = function()
+                {
+                    return 'hello! My name is '+ this.name;
+                }
+                
+            }
+            var ankitTiwari = new person('Ankit', 21);
+            console.log(ankitTiwari.greeting());
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>

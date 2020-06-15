@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Event Handling
+	</title>
+
+</head>
+<body>
+	<button id="ClickMe">Click Me!</button>
+	<p>You have clicked the button <span id="numclicks">0 times</span>.</p>
+	<div id="MouseHover">Put the Mouse Here!</div><br>
+	<div class="highlightText">this is some text here</div>
+	<div>this is some other text here</div>
+	<div class="highlightText">this one is important too</div><br>
+	<input type="text" id="txt1"/><br>
+	Hello <span id="txtspan">guest</span>
+<!--   ##################[ JavaScript ]######################   -->
+	<script type="text/javascript">
+/*******************click Event********************/
+		var clicks = 0;
+		function clickTimer() {
+			clicks++;
+			var clickNumSpan = document.getElementById('numclicks');
+			if (clicks == 1) 
+				clickNumSpan.innerHTML = "Once";
+			else
+				clickNumSpan.innerHTML = clicks + " times";
+		}
+		var button = document.getElementById('ClickMe');
+		button.addEventListener('click', clickTimer);
+
+/********************mouseover Event******************/
+		function makeBold()
+		{
+			var divs = document.getElementsByClassName('highlightText');
+				for(var i=0; i<divs.length; i++)
+				{
+					divs[i].style.color = 'red';
+					divs[i].style.fontWeight = 'bold';
+				}	
+		}
+		function restore()
+		{
+			var divs = document.getElementsByClassName('highlightText');
+			for(var i=0;i<divs.length;i++)
+			{
+				divs[i].style.color = 'black';
+				divs[i].style.fontWeight = 'normal';
+			}
+		}
+		var mouseOverMe = document.getElementById('MouseHover');
+		mouseOverMe.addEventListener('mouseover', makeBold);
+		mouseOverMe.addEventListener('mouseout', restore);
+
+/*******************keyup event***********************/
+		function nameHandler(e)
+		{
+			if (e.keyCode == 13) 
+			{
+			var inputtxt = document.getElementById('txt1');
+			var spantxt = document.getElementById('txtspan');
+			spantxt.style.backgroundColor = 'cyan';
+			spantxt.innerHTML = inputtxt.value;
+			spantxt.style.textTransform = 'capitalize';
+			}
+		}
+		//var textchange = document.getElementById('txt1');
+		document.addEventListener('keyup', nameHandler);
+	</script>
+</body>
+</html> 

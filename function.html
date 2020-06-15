@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>functions</title>
+	<script type="text/javascript">
+		var num = [2,4,6,8];
+  			function print(n)
+  			{
+  				console.log(n);
+  				document.write(n);
+  			}
+  			function isEven(n)
+  			{
+  				return n%2==0;
+
+  			}
+  			num.forEach(print);
+  			console.log(num.every(isEven));  //true
+  			document.write(num.every(isEven));
+  			function square(n)
+  			{
+  				return n*n;
+  			}
+  			console.log(num.map(square));
+
+  			console.log("factorial")	
+  			function factorial(n)
+  			{
+  				var fact=1;
+  				for (var i = 1; i <=n; i++)
+  				 {
+  					fact*=i;
+  				 }
+  				 return fact;
+  			}	
+  			//var f=factorial(5);
+  			//console.log(factorial(5));
+  			console.log(factorial(5));
+
+
+  			var object = {
+  				name: 'web12',
+  				size: 12,
+  				greetings: function () {		//functions can also be defined as a part of object
+  					// body...
+  					return 'hello, nice meeting you!';
+  				}
+  			}
+  			changeObject(object);
+  			console.log(object.name);
+  			function changeObject(obj)
+  			{
+  				obj.name = 'database1';
+  				obj.size++;
+  			}
+  			console.log(object.name);
+  			console.log(object.size);
+  			function changeValue(a) {
+  				a.size = 33
+  			}
+  			changeValue(object);
+  			console.log(object.size);
+  			console.log(object.greetings());
+	</script>
+</head>
+<body>
+
+</body>
+</html>
